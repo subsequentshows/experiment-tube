@@ -1,0 +1,283 @@
+body {
+  background: #18212A;
+}
+
+p {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  color: #ffffff;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px !important;
+  margin: auto;
+  flex-wrap: wrap;
+
+  .row {
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+
+#banner {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: #000;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  position: relative;
+}
+
+#banner .fill {
+  transform: translateY(150px);
+  animation-name: fillAction;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.25s;
+}
+
+#banner .pour {
+  width: 6px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  bottom: 0;
+  top: 0;
+  background: #009ae6;
+  animation-name: pourAction;
+  animation-timing-function: linear;
+  animation-duration: 0.25s;
+}
+
+#banner #waveShape {
+  animation-name: waveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  width: 300px;
+  height: 150px;
+  fill: #04acff;
+}
+
+@keyframes pourAction {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillAction {
+  0% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes waveAction {
+  0% {
+    transform: translate(-150px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+
+
+
+
+.box{
+  position: relative;
+  background: none;
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.container{
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  background: none;
+  top: 25%;
+  left: 30%;
+}
+
+.glass{
+  position: absolute;
+  height: 80%;
+  width: 20%;
+  background: #B5F0E8;
+  opacity: 0.7;
+  top: 20%;
+  left: 40%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  z-index: 2;
+}
+
+.cap-left{
+  position: absolute;
+  width: 50%;
+  height: 15%;
+  top: -15%;
+  background: #B9661C;
+} 
+.cap-right{
+  position: absolute;
+  width: 50%;
+  height: 15%;
+  top: -15%;
+  right: 0%;
+  background: #9A501D;
+}
+
+.fill{
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  background: #DA0000;
+  opacity: 0.8;
+  bottom: 5%;
+  left: 10%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  animation: slime 1.5s infinite;
+  z-index: 1;
+}
+
+.bubble-1{
+  position: absolute;
+  height: 10%;
+  width: 35%;
+  top: 10%;
+  left: 15%;
+  border-radius: 50%;
+  background: #bf0303;
+}
+
+.bubble-2{
+  position: absolute;
+  height: 8%;
+  width: 33%;
+  top: 25%;
+  right: 15%;
+  border-radius: 50%;
+  background: #bf0303;
+}
+
+.bubble-3{
+  position: absolute;
+  height: 10%;
+  width: 35%;
+  top: 40%;
+  left: 15%;
+  border-radius: 50%;
+  background: #bf0303;
+}
+
+.bubble-4{
+  position: absolute;
+  height: 8%;
+  width: 33%;
+  top: 55%;
+  right: 15%;
+  border-radius: 50%;
+  background: #bf0303;
+}
+
+.bubble-5{
+  position: absolute;
+  height: 8%;
+  width: 33%;
+  top: 75%;
+  left: 15%;
+  border-radius: 50%;
+  background: #bf0303;
+}
+
+//animations
+@keyframes slime{
+  0%{
+    height: 0%;
+  }
+  10%{
+    height: 10%;
+  }
+  15%{
+    height: 15%;
+  }
+  20%{
+    height: 20%;
+  }
+  25%{
+    height: 25%;
+  }
+  30%{
+    height: 30%;
+  }
+  35%{
+    height: 35%;
+  }
+  40%{
+    height: 40%;
+  }
+  45%{
+    height: 45%;
+  }
+  50%{
+    height: 50%;
+  }
+  55%{
+    height: 55%;
+  }
+  60%{
+    height: 60%;
+  }
+  65%{
+    height: 65%;
+  }
+  70%{
+    height: 70%;
+  }
+  75%{
+    height: 75%;
+  }
+  80%{
+    height: 80%;
+  }
+  85%{
+    height: 85%;
+  }
+  90%{
+    height: 90%;
+  }
+  95%{
+    height: 92%;
+  }
+  100%{
+    height: 93%;
+  }
+
+}
