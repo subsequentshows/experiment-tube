@@ -1,5 +1,9 @@
 body {
-  background: #18212A;
+  background-image: url(../image/background/background-2.jpg);
+  background-color: transparent;
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 2000px;
 }
 
 p {
@@ -11,44 +15,40 @@ p {
   text-transform: uppercase;
 }
 
-.container {
+.content-container {
   display: flex;
   justify-content: center;
   max-width: 1440px !important;
   margin: auto;
   flex-wrap: wrap;
 }
-.container .row {
+.content-container .row {
   justify-content: space-around;
   width: 100%;
   margin-bottom: 100px;
 }
-
-#banner {
+.content-container .bottle {
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 300px;
+}
+.content-container .bottle img {
+  max-width: 150px;
+  max-height: 150px;
+}
+.content-container #banner {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 106px;
+  height: auto;
   background: #000;
   overflow: hidden;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   position: relative;
 }
-
-#banner .fill {
-  transform: translateY(150px);
-  animation-name: fillAction;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
-  animation-duration: 10s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.25s;
-}
-
-#banner .pour {
+.content-container #banner .pour {
   width: 6px;
   position: absolute;
   left: 50%;
@@ -60,14 +60,23 @@ p {
   animation-timing-function: linear;
   animation-duration: 0.25s;
 }
-
-#banner #waveShape {
+.content-container #banner .fills {
+  transform: translateY(150px);
+  animation-name: fillAction;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.25s;
+  animation: fillAction 10s infinite;
+}
+.content-container #banner .fills #waveShape {
   animation-name: waveAction;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-duration: 0.5s;
-  width: 300px;
-  height: 150px;
+  width: 108px;
+  height: 300px;
   fill: #04acff;
 }
 
@@ -118,7 +127,7 @@ p {
   position: absolute;
   height: 80%;
   width: 20%;
-  background: #B5F0E8;
+  background: #b5f0e8;
   opacity: 0.7;
   top: 20%;
   left: 40%;
@@ -126,13 +135,25 @@ p {
   border-bottom-right-radius: 50px;
   z-index: 2;
 }
+.glass .pour {
+  width: 6px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  bottom: 0;
+  top: 0;
+  background: #009ae6;
+  animation-name: pourAction;
+  animation-timing-function: linear;
+  animation-duration: 0.25s;
+}
 
 .cap-left {
   position: absolute;
   width: 50%;
   height: 15%;
   top: -15%;
-  background: #B9661C;
+  background: #b9661c;
 }
 
 .cap-right {
@@ -141,14 +162,14 @@ p {
   height: 15%;
   top: -15%;
   right: 0%;
-  background: #9A501D;
+  background: #9a501d;
 }
 
 .fill {
   position: absolute;
   height: 90%;
   width: 80%;
-  background: #DA0000;
+  background: #da0000;
   opacity: 0.8;
   bottom: 5%;
   left: 10%;
@@ -269,6 +290,50 @@ p {
   100% {
     height: 93%;
   }
+}
+.tube {
+  border: solid 6px #ffffff;
+  border-bottom: none;
+  width: 50px;
+  height: 180px;
+  position: relative;
+  margin: 0 auto;
+  transition: transform 1s;
+}
+.tube:after, .tube:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: blue;
+}
+.tube:after {
+  top: 100%;
+  left: -6px;
+  width: 100%;
+  min-width: 50px;
+  padding-bottom: 100%;
+  border: solid 6px #ffffff;
+  border-top: none;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0px -30px 0px -6px blue, 0px -50px 0px -6px blue;
+}
+.tube:before {
+  bottom: 0;
+  height: 138px;
+  width: 38px;
+  z-index: -1;
+  transition: transform 1s;
+}
+.tube:hover {
+  transform: rotate(60deg);
+}
+.tube:hover:before {
+  transform: skewY(-60deg);
+}
+.tube img {
+  max-width: 250px;
+  max-height: 250px;
 }
 
 /*# sourceMappingURL=index.css.map */

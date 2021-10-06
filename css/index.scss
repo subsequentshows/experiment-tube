@@ -1,5 +1,9 @@
 body {
-  background: #18212A;
+  background-image: url(../image/background/background-2.jpg);
+  background-color: transparent;
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 2000px;
 }
 
 p {
@@ -11,7 +15,7 @@ p {
   text-transform: uppercase;
 }
 
-.container {
+.content-container {
   display: flex;
   justify-content: center;
   max-width: 1440px !important;
@@ -23,54 +27,67 @@ p {
     width: 100%;
     margin-bottom: 100px;
   }
-}
 
-#banner {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  .bottle {
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 300px;
 
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  background: #000;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  position: relative;
-}
+    img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+  }
 
-#banner .fill {
-  transform: translateY(150px);
-  animation-name: fillAction;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
-  animation-duration: 10s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.25s;
-}
+  #banner {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
-#banner .pour {
-  width: 6px;
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  bottom: 0;
-  top: 0;
-  background: #009ae6;
-  animation-name: pourAction;
-  animation-timing-function: linear;
-  animation-duration: 0.25s;
-}
+    // border-radius: 50%;
+    width: 106px;
+    // height: 150px;
+    height: auto;
+    background: #000;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    position: relative;
 
-#banner #waveShape {
-  animation-name: waveAction;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 0.5s;
-  width: 300px;
-  height: 150px;
-  fill: #04acff;
+    .pour {
+      width: 6px;
+      position: absolute;
+      left: 50%;
+      margin-left: -3px;
+      bottom: 0;
+      top: 0;
+      background: #009ae6;
+      animation-name: pourAction;
+      animation-timing-function: linear;
+      animation-duration: 0.25s;
+    }
+
+    .fills {
+      transform: translateY(150px);
+      animation-name: fillAction;
+      animation-iteration-count: 1;
+      animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 0.4);
+      animation-duration: 10s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.25s;
+      animation: fillAction 10s infinite;
+
+      #waveShape {
+        animation-name: waveAction;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 0.5s;
+        width: 108px;
+        height: 300px;
+        fill: #04acff;
+      }
+    }
+  }
 }
 
 @keyframes pourAction {
@@ -100,12 +117,7 @@ p {
   }
 }
 
-
-
-
-
-
-.box{
+.box {
   position: relative;
   background: none;
   width: 600px;
@@ -115,7 +127,7 @@ p {
   margin-top: 5%;
 }
 
-.container{
+.container {
   position: absolute;
   width: 40%;
   height: 50%;
@@ -124,40 +136,53 @@ p {
   left: 30%;
 }
 
-.glass{
+.glass {
   position: absolute;
   height: 80%;
   width: 20%;
-  background: #B5F0E8;
+  background: #b5f0e8;
   opacity: 0.7;
   top: 20%;
   left: 40%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   z-index: 2;
+
+  .pour {
+    width: 6px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    bottom: 0;
+    top: 0;
+    background: #009ae6;
+    animation-name: pourAction;
+    animation-timing-function: linear;
+    animation-duration: 0.25s;
+  }
 }
 
-.cap-left{
+.cap-left {
   position: absolute;
   width: 50%;
   height: 15%;
   top: -15%;
-  background: #B9661C;
-} 
-.cap-right{
+  background: #b9661c;
+}
+.cap-right {
   position: absolute;
   width: 50%;
   height: 15%;
   top: -15%;
   right: 0%;
-  background: #9A501D;
+  background: #9a501d;
 }
 
-.fill{
+.fill {
   position: absolute;
   height: 90%;
   width: 80%;
-  background: #DA0000;
+  background: #da0000;
   opacity: 0.8;
   bottom: 5%;
   left: 10%;
@@ -167,7 +192,7 @@ p {
   z-index: 1;
 }
 
-.bubble-1{
+.bubble-1 {
   position: absolute;
   height: 10%;
   width: 35%;
@@ -177,7 +202,7 @@ p {
   background: #bf0303;
 }
 
-.bubble-2{
+.bubble-2 {
   position: absolute;
   height: 8%;
   width: 33%;
@@ -187,7 +212,7 @@ p {
   background: #bf0303;
 }
 
-.bubble-3{
+.bubble-3 {
   position: absolute;
   height: 10%;
   width: 35%;
@@ -197,7 +222,7 @@ p {
   background: #bf0303;
 }
 
-.bubble-4{
+.bubble-4 {
   position: absolute;
   height: 8%;
   width: 33%;
@@ -207,7 +232,7 @@ p {
   background: #bf0303;
 }
 
-.bubble-5{
+.bubble-5 {
   position: absolute;
   height: 8%;
   width: 33%;
@@ -218,66 +243,176 @@ p {
 }
 
 //animations
-@keyframes slime{
-  0%{
+@keyframes slime {
+  0% {
     height: 0%;
   }
-  10%{
+  10% {
     height: 10%;
   }
-  15%{
+  15% {
     height: 15%;
   }
-  20%{
+  20% {
     height: 20%;
   }
-  25%{
+  25% {
     height: 25%;
   }
-  30%{
+  30% {
     height: 30%;
   }
-  35%{
+  35% {
     height: 35%;
   }
-  40%{
+  40% {
     height: 40%;
   }
-  45%{
+  45% {
     height: 45%;
   }
-  50%{
+  50% {
     height: 50%;
   }
-  55%{
+  55% {
     height: 55%;
   }
-  60%{
+  60% {
     height: 60%;
   }
-  65%{
+  65% {
     height: 65%;
   }
-  70%{
+  70% {
     height: 70%;
   }
-  75%{
+  75% {
     height: 75%;
   }
-  80%{
+  80% {
     height: 80%;
   }
-  85%{
+  85% {
     height: 85%;
   }
-  90%{
+  90% {
     height: 90%;
   }
-  95%{
+  95% {
     height: 92%;
   }
-  100%{
+  100% {
     height: 93%;
   }
-
 }
+
+//v3
+
+.tube {
+  border: solid 6px #ffffff;
+  // border-top: none;
+  border-bottom: none;
+  width: 50px;
+  height: 180px;
+  position: relative;
+  margin: 0 auto;
+  transition: transform 1s;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: blue;
+  }
+
+  &:after {
+    top: 100%;
+    left: -6px;
+    width: 100%;
+    min-width: 50px;
+    padding-bottom: 100%;
+    border: solid 6px #ffffff;
+    border-top: none;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0px -30px 0px -6px blue, 0px -50px 0px -6px blue;
+  }
+
+  &:before {
+    bottom: 0;
+    height: 138px;
+    width: 38px;
+    z-index: -1;
+    transition: transform 1s;
+  }
+
+  &:hover {
+    transform: rotate(60deg);
+  }
+  &:hover:before {
+    transform: skewY(-60deg);
+  }
+
+  img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+
+// v4
+
+// div, button {
+//   display: block;
+//   position: relative;
+// }
+// #container {
+//   width: 50px;
+//   height: 150px;
+//   top: 30px;
+//   margin: 100px auto;
+//   // margin-bottom: 200px;
+//   transition: -webkit-transform 1s
+// }
+// button {
+//   position: absolute;
+//   top: 10px;
+//   padding: 1em;
+//   font-weight: bold;
+// }
+// #container.transition {
+//   -webkit-transform: rotate(60deg);
+// }
+// #tube-2 {
+//   border: solid 6px red;
+//   border-top: none;
+//   border-bottom: none;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   background: #fff;
+//   overflow: hidden;
+// }
+// #tube_bottom {
+//   width: 100%;
+//   height: 30%;
+//   border-radius: 50%;
+//   position: absolute;
+//   bottom: -15%;
+//   border: solid 6px red;
+//   background: blue;
+// }
+// #tube-2 div {
+//   position: absolute;
+//   left: -175px;
+//   width: 400px;
+//   height: 85%;
+//   top: 30%;
+//   background: blue;
+//   transition: -webkit-transform 1s, top 0.5s;
+// }
+// #container.transition #tube div {
+//   -webkit-transform: rotate(-60deg);
+//   transition: -webkit-transform 1s, top 1.4s;
+//   top: 70%;
+// }
